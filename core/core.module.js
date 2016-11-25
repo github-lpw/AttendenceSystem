@@ -1,5 +1,5 @@
 'use strict';
-angular.module('loginPage',[
+angular.module('core',[
   'core.userRestful',
   'core.userInfo'
 ]);
