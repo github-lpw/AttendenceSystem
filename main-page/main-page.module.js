@@ -1,2 +1,5 @@
 'use strict';
-angular.module('mainPage',[]);
+angular.module('mainPage',[
+  'core.viewInfo',
+  'core.userInfo'
+]);

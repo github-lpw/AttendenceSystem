@@ -7,10 +7,12 @@ config(['$locationProvider','$routeProvider','$httpProvider',
 
     $routeProvider.
       when('/loginPage', {
-        template: '<login-page></login-page>'
+        template: '<login-page></login-page>',
+        css:'css/login.css'
       }).
       when('/mainPage/', {
-        template: '<main-page></main-page>'
+        template: '<main-page></main-page>',
+        css:['css/main-page/AdminLTE.min.css','css/main-page/_all-skins.min.css','css/main-page/skin-blue-light.min.css','css/main-page/skin-blue.min.css']
       }).
       otherwise('/loginPage');
 
