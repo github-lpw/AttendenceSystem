@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Attendence System</title>
 
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!--link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/-->
     <link rel="stylesheet" href="app.css" />
 
+<!--Temp....-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+
+
+
+
     <!--系统脚本-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <!-- jQuery UI 1.11.4 -->
+    <script src="bower_components/jquery-ui/jquery-ui.min.js "></script>
+<!--Temp....-->
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js">
+    <script src="bower_components/angular-css/angular-css.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    </script>
 
     <!--自定义脚本-->
     <!--项目整体配置-->
@@ -31,16 +45,20 @@
     <script src="core/restfulapi/userrestful.service.js"></script>
     <script src="core/userinfo/userinfo.module.js"></script>
     <script src="core/userinfo/userinfo.service.js"></script>
-
+    <script src="core/ViewChangeService/viewinfo.module.js"></script>
+    <script src="core/ViewChangeService/viewinfo.service.js"></script>
 
     <!--页面模块，login and main-->
     <script src="login-page/login-page.module.js"></script>
     <script src="login-page/login-page.component.js"></script>
     <script src="main-page/main-page.module.js"></script>
     <script src="main-page/main-page.component.js"></script>
+    <!--页面脚本，login and main-->
+    <!-- AdminLTE App -->
+    <script src="js/main.min.js "></script>
 
   </head>
-  <body>
+  <body class="hold-transition skin-blue sidebar-mini">
     <div class="view-container">
       <div ng-view class="view-frame"></div>
     </div>
