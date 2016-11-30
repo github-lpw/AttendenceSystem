@@ -1,0 +1,33 @@
+{
+  "name": "AttendenceSystem",
+  "homepage": "https://github.com/github-lpw/AttendenceSystem",
+  "authors": [
+    "lpw"
+  ],
+  "description": "Angularjs+Nodejs+ManoDb",
+  "main": "",
+  "keywords": [
+    "Angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-css": "^1.0.8",
+    "angular-animate": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular": "angularjs#^1.5.8",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "Ionicons": "ionicons#^2.0.1",
+    "jquery-ui": "^1.12.1",
+    "jquery": "^3.1.1"
+  }
+}
