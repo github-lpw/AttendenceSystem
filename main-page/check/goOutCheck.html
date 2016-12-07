@@ -1,1 +1,107 @@
-<div>审核申请：这家伙要出差</div>
+<section class="content-header">
+    <h1>外出审批</h1>
+    <ol class="breadcrumb ">
+        <li><a href="# "><i class="fa fa-dashboard "></i>主页</a></li>
+        <li class="active ">外出审批</li>
+    </ol>
+</section>
+<section class="content" ng-controller="goOutCheckController">
+    <div class="row ">
+        <div class="col-xs-12 ">
+            <div class="box ">
+                <div class="box-header ">
+                    <i class="fa fa-table "></i>
+                    <h3 class="box-title ">待审批外出记录</h3>
+                </div>
+                <div class="box-body ">
+                    <table id="example1" class="table table-bordered table-striped table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th>工号</th>
+                                <th>姓名</th>
+                                <th>部门</th>
+                                <th>岗位</th>
+                                <th>申请日期</th>
+                                <th>开始日期</th>
+                                <th>结束日期</th>
+                                <th>状态</th>
+                                <th>补交</th>
+                                <th>紧急</th>
+                                <th>天数</th>
+                                <th>地点</th>
+                                <th>事由</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-xs-12 ">
+            <div id="example5" class="ezmodal" ezmodal-width="auto ">
+                <div class="ezmodal-container ">
+                    <div class="ezmodal-header ">
+                        <div class="ezmodal-close " data-dismiss="ezmodal">x</div>
+                        外出详情
+                    </div>
+                    <div class="ezmodal-content ">
+                        <table class="table table-bordered table-striped table-hover table-condensed text-center">
+                            <colgroup>
+                                <col style>
+                                <col style="width:70%;">
+                            </colgroup>
+                            <tr>
+                                <th>记录编号</th>
+                            </tr>
+                            <tr>
+                                <th>工号</th>
+                            </tr>
+                            <tr>
+                                <th>姓名</th>
+                            </tr>
+                            <tr>
+                                <th>部门</th>
+                            </tr>
+                            <tr>
+                                <th>岗位</th>
+                            </tr>
+                            <tr>
+                                <th>申请日期</th>
+                            </tr>
+                            <tr>
+                                <th>开始日期</th>
+                            </tr>
+                            <tr>
+                                <th>结束日期</th>
+                            </tr>
+                            <tr>
+                                <th>补交</th>
+                            </tr>
+                            <tr>
+                                <th>状态</th>
+                            </tr>
+                            <tr>
+                                <th>紧急</th>
+                            </tr>
+                            <tr>
+                                <th>天数</th>
+                            </tr>
+                            <tr>
+                                <th>地点</th>
+                            </tr>
+                            <tr>
+                                <th>理由</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="ezmodal-footer" style="text-align: center;">
+                        <button type="button" class="btn btn-primary" data-pass="ezmodal" style="margin-right: 5%;">通过</button>
+                        <button type="button" class="btn btn-default" data-reject="ezmodal" style="margin-left: 5%;">拒绝</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
