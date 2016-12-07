@@ -1,1 +1,103 @@
-<div >我是神</div>
+<section class="content-header">
+    <h1>请假记录</h1>
+    <ol class="breadcrumb">
+        <li><a href="# "><i class="fa fa-dashboard "></i>主页</a></li>
+        <li class="active ">请假记录</li>
+    </ol>
+</section>
+<section class="content" ng-controller="leaveController">
+    <div class="row ">
+        <div class="col-xs-12 ">
+            <div class="box ">
+                <div class="box-header ">
+                    <i class="fa fa-table "></i>
+                    <h3 class="box-title ">全体员工请假记录</h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped table-hover table-condensed text-center">
+                        <thead>
+                            <tr>
+                                <th>工号</th>
+                                <th>姓名</th>
+                                <th>部门</th>
+                                <th>岗位</th>
+                                <th>类型</th>
+                                <th>申请日期</th>
+                                <th>开始日期</th>
+                                <th>结束日期</th>
+                                <th>补交</th>
+                                <th>状态</th>
+                                <th>紧急</th>
+                                <th>天数</th>
+                                <th>事由</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-xs-12 ">
+            <div id="example5" class="ezmodal" style="width: small;">
+                <div class="ezmodal-container ">
+                    <div class="ezmodal-header ">
+                        <div class="ezmodal-close " data-dismiss="ezmodal">x</div>
+                        假单详情
+                    </div>
+                    <div class="ezmodal-content ">
+                        <table class="table table-bordered table-striped table-hover table-condensed text-center">
+                            <colgroup>
+                                <col style>
+                                <col style="width:70%;">
+                            </colgroup>
+                            <tr>
+                                <th>工号</th>
+                            </tr>
+                            <tr>
+                                <th>姓名</th>
+                            </tr>
+                            <tr>
+                                <th>部门</th>
+                            </tr>
+                            <tr>
+                                <th>岗位</th>
+                            </tr>
+                            <tr>
+                                <th>类型</th>
+                            </tr>
+                            <tr>
+                                <th>申请日期</th>
+                            </tr>
+                            <tr>
+                                <th>开始日期</th>
+                            </tr>
+                            <tr>
+                                <th>结束日期</th>
+                            </tr>
+                            <tr>
+                                <th>补交</th>
+                            </tr>
+                            <tr>
+                                <th>状态</th>
+                            </tr>
+                            <tr>
+                                <th>紧急</th>
+                            </tr>
+                            <tr>
+                                <th>天数</th>
+                            </tr>
+                            <tr>
+                                <th>理由</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="ezmodal-footer ">
+                        <button type="button " class="btn " data-dismiss="ezmodal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
