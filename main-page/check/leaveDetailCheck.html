@@ -1,0 +1,103 @@
+<section class="content-header ">
+    <h1>请假审批进度</h1>
+    <ol class="breadcrumb ">
+        <li><a ng-click="$ctrl.indexClick()"><i class="fa fa-dashboard "></i>主页</a></li>
+        <li class="active ">请假审批进度</li>
+    </ol>
+</section>
+<section class="content" ng-controller="leaveDetailController">
+    <div class="row ">
+        <div class="col-xs-12 ">
+            <div class="box ">
+                <div class="box-header ">
+                    <i class="fa fa-hourglass-2 "></i>
+                    <h3 class="box-title ">请假审批进度</h3>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th>申请时间</th>
+                                <th>开始时间</th>
+                                <th>结束时间</th>
+                                <th>天数</th>
+                                <th>类型</th>
+                                <th>状态</th>
+                                <th>部门经理审批</th>
+                                <th>副总经理审批</th>
+                                <th>总经理审批</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row hidden" >
+        <div class="col-md-12 ">
+            <ul class="timeline">
+                <li>
+                    <i class="fa fa-hourglass-start bg-blue "></i>
+                    <div class="timeline-item ">
+                        <span class="time "><i class="fa fa-clock-o "></i></span>
+                        <h3 class="timeline-header "><a href="# ">等待审核</a></h3>
+                        <div class="timeline-body ">
+                            你的申请已加入待审批队列...
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-check bg-blue "></i>
+                    <div class="timeline-item ">
+                        <span class="time "><i class="fa fa-clock-o "></i></span>
+                        <h3 class="timeline-header "><a href="# ">项目经理</a></h3>
+                        <div class="timeline-body ">
+                            你的申请正在等待审批...
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i></i>
+                    <div class="timeline-item ">
+                        <span class="time "><i class="fa fa-clock-o "></i></span>
+                        <h3 class="timeline-header no-border "><a href="# ">部门经理</a></h3>
+                        <div class="timeline-body ">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-check bg-yellow "></i>
+                    <div class="timeline-item ">
+                        <span class="time "><i class="fa fa-clock-o "></i></span>
+                        <h3 class="timeline-header no-border "><a href="# ">副总经理</a></h3>
+                        <div class="timeline-body ">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-check bg-maroon "></i>
+                    <div class="timeline-item ">
+                        <span class="time "><i class="fa fa-clock-o "></i></span>
+                        <h3 class="timeline-header "><a href="# ">总经理</a></h3>
+                        <div class="timeline-body ">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-check bg-purple "></i>
+                    <div class="timeline-item ">
+                        <span class="time "><i class="fa fa-clock-o "></i></span>
+                        <h3 class="timeline-header no-border "><a href="# ">最终状态</a></h3>
+                        <div class="timeline-body ">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-hourglass-end bg-gray "></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

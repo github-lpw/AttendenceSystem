@@ -1,1 +1,141 @@
-<div>{{$ctrl.userName}}</div>
+<div class="wrapper">
+    <header class="main-header">
+        <a style="cursor:pointer" ng-click="$ctrl.indexClick()" class="logo">
+            <span class="logo-mini"><b>考勤</b>系统</span>
+            <span class="logo-lg"><b>考勤</b><b>系统</b></span>
+        </a>
+        <nav class="navbar navbar-static-top">
+            <a class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown messages-menu">
+                        <a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">您有4份申请需要审批</li>
+                            <li>
+                                <ul class="menu">
+                                    <li>
+                                        <a style="cursor:pointer" ng-click="$ctrl.leaveCheckClick()">
+                                            <div class="pull-left">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </div>
+                                            <h4>哈哈哈<small><i class="fa fa-clock-o"></i> Yesterday</small></h4>
+                                            <p>产假</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a style="cursor:pointer">See All Messages</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown user user-menu">
+                        <a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user" style="color:rgb(255, 250,250);"></span>
+                            <span class="hidden-xs">{{name}}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header">
+                                <span class="glyphicon glyphicon-user" style="color:rgb(255, 250,250);"></span>
+                                <p>
+                                    {{name}} - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out<span class="fa fa-sign-out"></span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <span class="glyphicon glyphicon-user" style="color:rgb(255, 250,250);"></span>
+                </div>
+                <div class="pull-left info ">
+                    <p>{{name}}</p>
+                    <a href="# "><i class="fa fa-circle text-success "></i> Online</a>
+                </div>
+            </div>
+            <ul class="sidebar-menu ">
+                <li class="header text-center ">功 能 目 录</li>
+                <li class="treeview ">
+                    <a style="cursor:pointer">
+                        <i class="fa fa-file-text "></i><span>写申请</span>
+                        <span class="pull-right-container ">
+                          <i class="fa fa-angle-left pull-right "></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu ">
+                        <li><a ng-click="$ctrl.newLeaveClick() " style="cursor:pointer "><i class="fa fa-circle-o "></i>请假申请</a></li>
+                        <li><a ng-click="$ctrl.newGoOutClick() " style="cursor:pointer "><i class="fa fa-circle-o "></i>外出申请</a></li>
+                    </ul>
+                </li>
+                <li class="treeview ">
+                    <a style="cursor:pointer ">
+                        <i class="fa fa-files-o "></i><span>申请记录</span>
+                        <span class="pull-right-container ">
+                          <i class="fa fa-angle-left pull-right "></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu ">
+                        <li><a ng-click="$ctrl.leaveRecordsClick() " style="cursor:pointer "><i class="fa fa-circle-o "></i>请假记录</a></li>
+                        <li><a ng-click="$ctrl.goOutRecordsClick() " style="cursor:pointer "><i class="fa fa-circle-o "></i>外出记录</a></li>
+                        <li><a ng-click="$ctrl.surplusVacationRecordsClick() " style="cursor:pointer "><i class="fa fa-circle-o "></i>剩余年假</a></li>
+                    </ul>
+                </li>
+                <li class="treeview ">
+                    <a style="cursor:pointer ">
+                        <i class="fa fa-th "></i> <span>审核申请</span>
+                        <span class="pull-right-container ">
+                            <i class="fa fa-angle-left pull-right "></i>
+                            <small class="label label-primary pull-right ">4</small>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu ">
+                        <li><a ng-click="$ctrl.leaveCheckClick()" style="cursor:pointer "><i class="fa fa-circle-o "></i>请假审批</a></li>
+                        <li><a ng-click="$ctrl.goOutCheckClick()" style="cursor:pointer "><i class="fa fa-circle-o "></i>外出审批</a></li>
+                        <li><a ng-click="$ctrl.leaveDetailCheckClick()" style="cursor:pointer"><i class="fa fa-circle-o"></i>请假审批进度</a></li>
+                        <li><a ng-click="$ctrl.goOutDetailCheckClick()" style="cursor:pointer"><i class="fa fa-circle-o"></i>外出审批进度</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </aside>
+    <div class="content-wrapper " ng-include="$ctrl.currentTemplate">
+        
+    </div>
+    <footer class="main-footer ">
+        <div class="pull-right hidden-xs ">
+            <b>Version</b> 2.3.8
+        </div>
+        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com ">Almsaeed Studio</a>.</strong> All rights reserved.
+    </footer>
+</div>
