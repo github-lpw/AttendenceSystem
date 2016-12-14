@@ -1,8 +1,8 @@
 angular.module('loginPage')
 .component('loginPage',{
   templateUrl:'login-page/login-page.template.html',
-  controller:['userRestful','userInfo',
-    function loginPageController(userRestful,userInfo){
+  controller:['$sessionStorage','userRestful','userInfo',
+    function loginPageController($sessionStorage,userRestful,userInfo){
       this.goMainPage=function(){
 
           userRestful.query({loginname:this.loginname,password:this.password},function(user){
@@ -14,6 +14,9 @@ angular.module('loginPage')
           userInfo.baseInfo.year_leave_left=user[0].year_leave_left;
           userInfo.baseInfo.year_leave_total=user[0].year_leave_total;
           //跳转到主页面！
+          console.log('sessionStorage.userInfo:');
+          $sessionStorage.userInfo=userInfo;
+          console.log($sessionStorage.userInfo);
           window.location.href="#!/mainPage/";
         });
 
