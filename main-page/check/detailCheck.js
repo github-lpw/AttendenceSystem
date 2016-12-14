@@ -1,7 +1,8 @@
 angular.module('mainPage')
-    .controller('leaveDetailController', ['$resource', '$scope', 'userInfo',
-        function leaveDetailController($resource, $scope, userInfo) {
-            var User = $resource('http://172.23.71.219:3000/leave/showStatus', { id: userInfo.baseInfo.userName });
+    .controller('leaveDetailController', ['$sessionStorage','$resource', '$scope', 
+        function leaveDetailController($sessionStorage,$resource, $scope) {
+            var userInfo = $sessionStorage.userInfo;
+            var User = $resource('http://172.23.159.61:3000/leave/showStatus', { id: userInfo.baseInfo.userName });
             User.query({}, function(leaveRecords) {
                 if (userInfo.baseInfo.office < 3) {
                     $(".sidebar-menu").children("li:eq(" + 3 + ")").children('ul').children("li:eq(" + 0 + ")").attr('class', 'hidden');
@@ -138,7 +139,6 @@ angular.module('mainPage')
                             $(".timeline li:eq(" + 5 + ")").children('i').attr("class", "fa fa-check bg-blue");
                             $(".timeline li:eq(" + 5 + ") .timeline-item .timeline-body").html("你的申请的最终状态为通过...");
                         }
-                        console.log($("div.hidden"));
                         $("div.hidden").removeClass("hidden");
                     });
                 });
@@ -149,9 +149,10 @@ angular.module('mainPage')
 
 
 angular.module('mainPage')
-    .controller('goOutDetailController', ['$resource', '$scope', 'userInfo',
-        function goOutDetailController($resource, $scope, userInfo) {
-            var User = $resource('http://172.23.71.219:3000/travel/showStatus', { id: userInfo.baseInfo.userName });
+    .controller('goOutDetailController', ['$sessionStorage','$resource', '$scope',
+        function goOutDetailController($sessionStorage,$resource, $scope) {
+            var userInfo = $sessionStorage.userInfo;
+            var User = $resource('http://172.23.159.61:3000/travel/showStatus', { id: userInfo.baseInfo.userName });
             User.query({}, function(leaveRecords) {
                 if (userInfo.baseInfo.office < 3) {
                     $(".sidebar-menu").children("li:eq(" + 3 + ")").children('ul').children("li:eq(" + 0 + ")").attr('class', 'hidden');
@@ -208,9 +209,7 @@ angular.module('mainPage')
                     $(".sidebar-menu").children("li:eq(" + 3 + ")").children('ul').children("li:eq(" + 3 + ")").attr('class', 'active');
 
                     var trElements = $("#example1 tbody tr");
-                    console.log($("#example1").outerHeight());
                     trElements.attr("href", "#target");
-                    trElements.attr("data-uk-smooth-scroll", "{offset: -300}");
 
                     $('#example1 tbody').on('click', 'tr', function() {
                         $('#example1 .active').toggleClass('active');
@@ -268,7 +267,7 @@ angular.module('mainPage')
                             $(".timeline li:eq(" + 5 + ")").children('i').attr("class", "fa fa-check bg-blue");
                             $(".timeline li:eq(" + 5 + ") .timeline-item .timeline-body").html("你的申请的最终状态为通过...");
                         }
-                        console.log($("div.hidden"));
+                        
                         $("div.hidden").removeClass("hidden ");
                     });
                 });

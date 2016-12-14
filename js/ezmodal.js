@@ -15,8 +15,10 @@
             $('.ezmodal').each(function() {
                 if ($(this).ezmodal('isVisible')) {
                     if ($(this).data('ezmodal').options.escClose) {
-                        $(this).ezmodal('hide');
                         $('#example1 .active').toggleClass('active');
+                        $(this).find("table").find("td").remove();
+                        $(this).ezmodal('hide');
+                        
                     }
                 }
             });

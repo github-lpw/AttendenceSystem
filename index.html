@@ -16,17 +16,23 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
     <!--系统脚本-->
+    <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
     <script src="js/jquery-2.2.3.min.js"></script>
-    <!-- <script src="bower_components/jquery/dist/jquery.js"></script> -->
     <!-- jQuery UI 1.11.4 -->
     <script src="bower_components/jquery-ui/jquery-ui.min.js "></script>
-    <!--Temp....-->
+
+<!--Temp....-->
+
+    <!--conflict  -->
+    <!-- <script src="js/jquery-2.2.3.min.js"></script> -->
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-css/angular-css.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/ngStorage.min.js"></script>
     <!--自定义脚本-->
     <!--项目整体配置-->
     <script src="app.module.js"></script>
@@ -44,10 +50,12 @@
     <script src="login-page/login-page.component.js"></script>
     <script src="main-page/main-page.module.js"></script>
     <script src="main-page/main-page.component.js"></script>
-    
+
     <!--页面脚本，login and main-->
     <!-- AdminLTE App -->
     <script src="js/main.min.js "></script>
+
+    <!--check and leaveRecords  -->
 
     <script src="js/jquery.dataTables.js"></script>
     <script src="js/dataTables.bootstrap.min.js"></script>
@@ -55,13 +63,18 @@
     <link rel="stylesheet" href="css/main-page/leaveRecords/ezmodal.css">
     <script src="main-page/leaveRecords/leaveRecords.js"></script>
     <script src="js/jquery.knob.js "></script>
-    <script src="js/uikit.min.js "></script>
     <script src="main-page/check/check.js"></script>
     <script src="main-page/check/detailCheck.js"></script>
+    <script src="main-page/notice/notice.js"></script>
+
+    <!--apply-js  -->
+    <script src="main-page/apply/apply.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="js/apply/daterangepicker.js"></script>
 
 </head>
-
 <body class="hold-transition skin-blue sidebar-mini">
+
     <div class="view-container">
         <div ng-view class="view-frame"></div>
     </div>

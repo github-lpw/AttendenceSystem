@@ -1,7 +1,8 @@
 angular.module('mainPage')
-    .controller('leaveController', ['$resource', 'userInfo',
-        function leaveController($resource, userInfo) {
-            var User = $resource('http://172.23.71.219:3000/leave/queryAll', { office: userInfo.baseInfo.office, department: userInfo.baseInfo.department });
+    .controller('leaveController', ['$sessionStorage','$resource', 
+        function leaveController($sessionStorage,$resource) {
+            var userInfo = $sessionStorage.userInfo;
+            var User = $resource('http://172.23.159.61:3000/leave/queryAll', { office: userInfo.baseInfo.office, department: userInfo.baseInfo.department });
             User.query({}, function(leaveRecords) {
                 if (userInfo.baseInfo.office < 3) {
                     $(".sidebar-menu").children("li:eq(" + 3 + ")").children('ul').children("li:eq(" + 0 + ")").attr('class', 'hidden');
@@ -181,18 +182,20 @@ angular.module('mainPage')
                         var table = $('#example1').DataTable();
                         $(this).toggleClass('active');
                         var singleData = table.rows('.active').data()[0];
+                        
                         $("#example5 table tr:eq(" + 0 + ")").append('<td>' + singleData.l_staff + '</td>');
                         $("#example5 table tr:eq(" + 1 + ")").append('<td>' + singleData.name + '</td>');
                         $("#example5 table tr:eq(" + 2 + ")").append('<td>' + singleData.department + '</td>');
                         $("#example5 table tr:eq(" + 3 + ")").append('<td>' + singleData.office + '</td>');
                         $("#example5 table tr:eq(" + 4 + ")").append('<td>' + singleData.l_type + '</td>');
-                        $("#example5 table tr:eq(" + 5 + ")").append('<td>' + singleData.l_start + '</td>');
-                        $("#example5 table tr:eq(" + 6 + ")").append('<td>' + singleData.l_end + '</td>');
-                        $("#example5 table tr:eq(" + 7 + ")").append('<td>' + singleData.l_delay + '</td>');
-                        $("#example5 table tr:eq(" + 8 + ")").append('<td>' + singleData.l_status + '</td>');
-                        $("#example5 table tr:eq(" + 9 + ")").append('<td>' + singleData.l_crash + '</td>');
-                        $("#example5 table tr:eq(" + 10 + ")").append('<td>' + singleData.l_day + '</td>');
-                        $("#example5 table tr:eq(" + 11 + ")").append('<td>' + singleData.l_desp + '</td>');
+                        $("#example5 table tr:eq(" + 5 + ")").append('<td>' + singleData.l_date + '</td>');
+                        $("#example5 table tr:eq(" + 6 + ")").append('<td>' + singleData.l_start + '</td>');
+                        $("#example5 table tr:eq(" + 7 + ")").append('<td>' + singleData.l_end + '</td>');
+                        $("#example5 table tr:eq(" + 8 + ")").append('<td>' + singleData.l_delay + '</td>');
+                        $("#example5 table tr:eq(" + 9 + ")").append('<td>' + singleData.l_status + '</td>');
+                        $("#example5 table tr:eq(" + 10 + ")").append('<td>' + singleData.l_crash + '</td>');
+                        $("#example5 table tr:eq(" + 11 + ")").append('<td>' + singleData.l_day + '</td>');
+                        $("#example5 table tr:eq(" + 12 + ")").append('<td>' + singleData.l_desp + '</td>');
                         $(this).toggleClass('active');
                     });
                     $('div .box-body').on('click', function() {
@@ -206,9 +209,10 @@ angular.module('mainPage')
 
 
 angular.module('mainPage')
-    .controller('goOutController', ['$resource', 'userInfo',
-        function goOutController($resource, userInfo) {
-            var User = $resource('http://172.23.71.219:3000/travel/queryAll', { office: userInfo.baseInfo.office, department: userInfo.baseInfo.department });
+    .controller('goOutController', ['$sessionStorage','$resource', 
+        function goOutController($sessionStorage,$resource) {
+            var userInfo = $sessionStorage.userInfo;
+            var User = $resource('http://172.23.159.61:3000/travel/queryAll', { office: userInfo.baseInfo.office, department: userInfo.baseInfo.department });
             User.query({}, function(leaveRecords) {
                 if (userInfo.baseInfo.office < 3) {
                     $(".sidebar-menu").children("li:eq(" + 3 + ")").children('ul').children("li:eq(" + 0 + ")").attr('class', 'hidden');
@@ -360,18 +364,20 @@ angular.module('mainPage')
                         var table = $('#example1').DataTable();
                         $(this).toggleClass('active');
                         var singleData = table.rows('.active').data()[0];
+                        
                         $("#example5 table tr:eq(" + 0 + ")").append('<td>' + singleData.r_staff + '</td>');
                         $("#example5 table tr:eq(" + 1 + ")").append('<td>' + singleData.name + '</td>');
                         $("#example5 table tr:eq(" + 2 + ")").append('<td>' + singleData.department + '</td>');
                         $("#example5 table tr:eq(" + 3 + ")").append('<td>' + singleData.office + '</td>');
-                        $("#example5 table tr:eq(" + 4 + ")").append('<td>' + singleData.r_start + '</td>');
-                        $("#example5 table tr:eq(" + 5 + ")").append('<td>' + singleData.r_end + '</td>');
-                        $("#example5 table tr:eq(" + 6 + ")").append('<td>' + singleData.r_status + '</td>');
-                        $("#example5 table tr:eq(" + 7 + ")").append('<td>' + singleData.r_delay + '</td>');
-                        $("#example5 table tr:eq(" + 8 + ")").append('<td>' + singleData.r_crash + '</td>');
-                        $("#example5 table tr:eq(" + 9 + ")").append('<td>' + singleData.r_day + '</td>');
-                        $("#example5 table tr:eq(" + 10 + ")").append('<td>' + singleData.r_destination + '</td>');
-                        $("#example5 table tr:eq(" + 11 + ")").append('<td>' + singleData.r_desp + '</td>');
+                        $("#example5 table tr:eq(" + 4 + ")").append('<td>' + singleData.r_date + '</td>');
+                        $("#example5 table tr:eq(" + 5 + ")").append('<td>' + singleData.r_start + '</td>');
+                        $("#example5 table tr:eq(" + 6 + ")").append('<td>' + singleData.r_end + '</td>');
+                        $("#example5 table tr:eq(" + 7 + ")").append('<td>' + singleData.r_status + '</td>');
+                        $("#example5 table tr:eq(" + 8 + ")").append('<td>' + singleData.r_delay + '</td>');
+                        $("#example5 table tr:eq(" + 9 + ")").append('<td>' + singleData.r_crash + '</td>');
+                        $("#example5 table tr:eq(" + 10 + ")").append('<td>' + singleData.r_day + '</td>');
+                        $("#example5 table tr:eq(" + 11 + ")").append('<td>' + singleData.r_destination + '</td>');
+                        $("#example5 table tr:eq(" + 12 + ")").append('<td>' + singleData.r_desp + '</td>');
                         $(this).toggleClass('active');
                     });
                     $('div .box-body').on('click', function() {
@@ -384,9 +390,10 @@ angular.module('mainPage')
     ]);
 
 angular.module('mainPage')
-    .controller('leftVacationController', ['$resource', '$scope', 'userInfo',
-        function leftVacationController($resource, $scope, userInfo) {
-            var User = $resource('http://172.23.71.219:3000/leave/yearleave', { id: userInfo.baseInfo.userName });
+    .controller('leftVacationController', ['$sessionStorage','$resource', '$scope', 
+        function leftVacationController($sessionStorage,$resource, $scope) {
+            var userInfo = $sessionStorage.userInfo;
+            var User = $resource('http://172.23.159.61:3000/leave/yearleave', { id: userInfo.baseInfo.userName });
             User.query({}, function(leaveRecords) {
                 if (userInfo.baseInfo.office < 3) {
                     $(".sidebar-menu").children("li:eq(" + 3 + ")").children('ul').children("li:eq(" + 0 + ")").attr('class', 'hidden');
